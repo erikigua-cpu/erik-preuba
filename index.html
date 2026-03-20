@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCENT ID</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="brand-mark">Luxury Fragrance Discovery</div>
+
+      <section class="screen screen--active hero-screen" data-screen="1">
+        <div class="hero-copy">
+          <p class="eyebrow">Exclusive Fragrance Match</p>
+          <h1>SCENT ID</h1>
+          <p class="subtitle">Discover your perfect luxury fragrance</p>
+        </div>
+        <button class="button button--primary" data-action="next">Start Test</button>
+      </section>
+
+      <section class="screen quiz-screen" data-screen="2" aria-hidden="true">
+        <div class="section-heading">
+          <p class="eyebrow">Scent Profile Test</p>
+          <h2>Tell us your preferences</h2>
+        </div>
+
+        <form id="scent-form" class="question-grid">
+          <fieldset class="question-card">
+            <legend>1. What style do you prefer?</legend>
+            <div class="option-list">
+              <label><input type="radio" name="style" value="Fresh" checked /> Fresh</label>
+              <label><input type="radio" name="style" value="Elegant" /> Elegant</label>
+              <label><input type="radio" name="style" value="Sexy" /> Sexy</label>
+              <label><input type="radio" name="style" value="Sport" /> Sport</label>
+              <label><input type="radio" name="style" value="Warm" /> Warm</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="question-card">
+            <legend>2. When do you use perfume?</legend>
+            <div class="option-list">
+              <label><input type="radio" name="occasion" value="Daily" checked /> Daily</label>
+              <label><input type="radio" name="occasion" value="Night" /> Night</label>
+              <label><input type="radio" name="occasion" value="Special" /> Special</label>
+              <label><input type="radio" name="occasion" value="Work" /> Work</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="question-card">
+            <legend>3. Weather you live in?</legend>
+            <div class="option-list option-list--inline">
+              <label><input type="radio" name="weather" value="Hot" checked /> Hot</label>
+              <label><input type="radio" name="weather" value="Cold" /> Cold</label>
+              <label><input type="radio" name="weather" value="Mixed" /> Mixed</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="question-card">
+            <legend>4. Personality?</legend>
+            <div class="option-list">
+              <label><input type="radio" name="personality" value="Calm" checked /> Calm</label>
+              <label><input type="radio" name="personality" value="Strong" /> Strong</label>
+              <label><input type="radio" name="personality" value="Creative" /> Creative</label>
+              <label><input type="radio" name="personality" value="Romantic" /> Romantic</label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="button button--primary button--wide">See result</button>
+        </form>
+      </section>
+
+      <section class="screen result-screen" data-screen="3" aria-hidden="true">
+        <div class="section-heading">
+          <p class="eyebrow">Your Match</p>
+          <h2>Your scent profile:</h2>
+        </div>
+        <p id="result-profile" class="result-profile">Fresh – Woody – Elegant</p>
+        <button class="button button--secondary" data-action="next">Continue to brands</button>
+      </section>
+
+      <section class="screen brands-screen" data-screen="4" aria-hidden="true">
+        <div class="section-heading">
+          <p class="eyebrow">Luxury Recommendations</p>
+          <h2>Recommended luxury brands</h2>
+        </div>
+
+        <div class="brand-grid" aria-label="Recommended brands">
+          <article class="brand-card">Armani</article>
+          <article class="brand-card">Prada</article>
+          <article class="brand-card">YSL</article>
+          <article class="brand-card">Lancôme</article>
+        </div>
+
+        <div class="action-group">
+          <button class="button button--primary">Save profile</button>
+          <button class="button button--secondary">Get discovery kit</button>
+          <button class="button button--ghost">Refill</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
